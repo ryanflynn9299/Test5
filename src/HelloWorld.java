@@ -3,11 +3,17 @@ import java.util.Scanner;
 
 public class HelloWorld {
 	
+	private static int getNumber(int i) {
+		return i++;
+	}
+	
 	public static String getMessage() {
 		String message;
-		Scanner in = new Scanner(System.in);
+		int i = 0;
 		
-		System.err.print("You must say things now: ");
+		Scanner in = new Scanner(System.in);
+		i = getNumber(i);
+		System.err.print("Do speech things " + i + ": ");
 		message = in.nextLine();
 		
 		return message;
